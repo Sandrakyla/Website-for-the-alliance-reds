@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игроки - Альянс Reds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="training.html">Обучение</a>
+        <a href="events.html">События</a>
+        <a href="players.html">Игроки</a>
+        <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="container">
+        <h2>Игроки</h2>
+        <div class="player-list">
+            <!-- Игрок 1 -->
+            <div class="player">
+                <img src="photo_2024-11-19_23-29-05.jpg" alt="Аватар Sandrakyla" onclick="openModal(['photo_2024-12-29_08-31-54.jpg', 'photo_2024-11-19_23-29-05.jpg', 'https://via.placeholder.com/402'])">
+                <p>Sandrakyla</p>
+            </div>
+            <!-- Игрок 2 -->
+            <div class="player">
+                <img src="photo_2024-12-29_08-31-54.jpg" alt="Аватар Игрока 2" onclick="openModal(['photo_2024-12-29_08-31-54.jpg', 'https://via.placeholder.com/404', 'https://via.placeholder.com/405'])">
+                <p>Игрок 2</p>
+            </div>
+            <!-- Добавьте больше игроков -->
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <button class="prev" onclick="changePhoto(-1)">&#10094;</button>
+        <button class="next" onclick="changePhoto(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
