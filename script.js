@@ -83,3 +83,20 @@ function calculate() {
     // Выводим результат
     document.getElementById('result').innerText = `Общее время: ${totalDays.toFixed(2)} дней`;
 }
+
+function resetCalculator() {
+    // Очищаем все поля ввода
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
+    document.getElementById('input3').value = '';
+    document.getElementById('input4').value = '';
+    document.getElementById('input5').value = '';
+    document.getElementById('input6').value = '';
+    document.getElementById('input7').value = '';
+    document.getElementById('input8').value = '';
+    document.getElementById('input9').value = '';
+    document.getElementById('input10').value = '';
+
+    // Очищаем результат
+    document.getElementById('result').innerText = '';
+}
