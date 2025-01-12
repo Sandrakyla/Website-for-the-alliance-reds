@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор - Альянс Reds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="training.html">Обучение</a>
+        <a href="events.html">События</a>
+        <a href="players.html">Игроки</a>
+        <a href="contact.html">Контакты</a>
+        <a href="calculator.html">Калькулятор</a>
+    </nav>
+
+    <div class="container">
+        <h2>Калькулятор</h2>
+        <form id="calculator-form">
+            <div class="input-group">
+                <label for="input1">Ячейка 1 (1 мин):</label>
+                <input type="number" id="input1" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input2">Ячейка 2 (5 мин):</label>
+                <input type="number" id="input2" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input3">Ячейка 3 (15 мин):</label>
+                <input type="number" id="input3" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input4">Ячейка 4 (30 мин):</label>
+                <input type="number" id="input4" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input5">Ячейка 5 (60 мин):</label>
+                <input type="number" id="input5" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input6">Ячейка 6 (4 часа):</label>
+                <input type="number" id="input6" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input7">Ячейка 7 (8 часов):</label>
+                <input type="number" id="input7" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input8">Ячейка 8 (12 часов):</label>
+                <input type="number" id="input8" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input9">Ячейка 9 (15 часов):</label>
+                <input type="number" id="input9" placeholder="Введите значение">
+            </div>
+            <div class="input-group">
+                <label for="input10">Ячейка 10 (1 день):</label>
+                <input type="number" id="input10" placeholder="Введите значение">
+            </div>
+            <button type="button" onclick="calculate()">Рассчитать</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

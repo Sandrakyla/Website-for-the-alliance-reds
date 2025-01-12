@@ -52,3 +52,34 @@ window.onclick = function (event) {
         closeModal();
     }
 };
+
+function calculate() {
+    // Временные интервалы в минутах
+    const intervals = [1, 5, 15, 30, 60, 240, 480, 720, 900, 1440]; // 1 день = 1440 минут
+
+    // Получаем значения из ячеек
+    const inputs = [
+        parseFloat(document.getElementById('input1').value) || 0,
+        parseFloat(document.getElementById('input2').value) || 0,
+        parseFloat(document.getElementById('input3').value) || 0,
+        parseFloat(document.getElementById('input4').value) || 0,
+        parseFloat(document.getElementById('input5').value) || 0,
+        parseFloat(document.getElementById('input6').value) || 0,
+        parseFloat(document.getElementById('input7').value) || 0,
+        parseFloat(document.getElementById('input8').value) || 0,
+        parseFloat(document.getElementById('input9').value) || 0,
+        parseFloat(document.getElementById('input10').value) || 0
+    ];
+
+    // Умножаем каждое значение на соответствующий интервал и суммируем
+    let totalMinutes = 0;
+    for (let i = 0; i < inputs.length; i++) {
+        totalMinutes += inputs[i] * intervals[i];
+    }
+
+    // Переводим минуты в дни
+    const totalDays = totalMinutes / 1440;
+
+    // Выводим результат
+    document.getElementById('result').innerText = `Общее время: ${totalDays.toFixed(2)} дней`;
+}
