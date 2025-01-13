@@ -100,3 +100,8 @@ function resetCalculator() {
     // Очищаем результат
     document.getElementById('result').innerText = '';
 }
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
