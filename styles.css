@@ -55,7 +55,7 @@ h1, h2 {
 }
 
 .hero {
-    background: url('Webp.net-resizeimage.jpg') no-repeat center center/cover;
+    background: url('Photo/Webp.net-resizeimage.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -269,4 +269,50 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Стили для планшетов (от 768px до 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+        padding: 10px;
+    }
+
+    .player-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .player img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+    }
+}
+
+/* Стили для десктопов (от 1024px и выше) */
+@media (min-width: 1024px) {
+    nav a {
+        font-size: 18px;
+        margin: 0 20px;
+        padding: 10px 15px;
+    }
+
+    .player-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .player img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal-content {
+        max-width: 70%;
+        max-height: 70%;
+    }
 }
