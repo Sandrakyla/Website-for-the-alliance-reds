@@ -27,6 +27,9 @@ nav {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
@@ -39,9 +42,17 @@ nav a {
     transition: background 0.3s ease; /* Плавное изменение фона */
 }
 
-nav a:hover {
+.nav-links a:hover {
     background: rgba(255, 255, 255, 0.2); /* Фон при наведении */
     border-radius: 5px; /* Закругленные углы */
+}
+
+/* Стили для гамбургер-меню */
+.menu-icon {
+    display: none; /* По умолчанию скрываем иконку */
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
 
 .container {
@@ -322,5 +333,37 @@ button:hover {
     .modal-content {
         max-width: 70%;
         max-height: 70%;
+    }
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Показываем иконку на мобильных устройствах */
+    }
+
+    .nav-links {
+        display: none; /* Скрываем ссылки по умолчанию */
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255, 68, 68, 0.9);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    .nav-links.active {
+        display: flex; /* Показываем ссылки при активации меню */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
     }
 }
