@@ -113,9 +113,3 @@ document.addEventListener('click', function(event) {
         navLinks.classList.remove('active');
     }
 });
-
-fetch('nav.html')
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML('afterbegin', data);
-    });
