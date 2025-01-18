@@ -423,6 +423,7 @@ button:hover {
 }
 
 .accordion-content {
+    overflow-y: auto; /* Добавляем прокрутку, если контент не помещается */
     padding: 0 15px;
     max-height: 0;
     overflow: hidden;
