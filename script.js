@@ -77,11 +77,13 @@ function calculate() {
         totalMinutes += inputs[i] * intervals[i];
     }
 
-    // Переводим минуты в дни
-    const totalDays = totalMinutes / 1440;
+    // Рассчитываем значения для понедельника и субботы-воскресенья
+    const mondayValue = totalMinutes * 250;
+    const weekendValue = totalMinutes * 200;
 
-    // Выводим результат
-    document.getElementById('result').innerText = `Общее время: ${totalDays.toFixed(2)} дней`;
+    // Выводим результаты
+    document.getElementById('monday-value').textContent = mondayValue.toFixed(2);
+    document.getElementById('weekend-value').textContent = weekendValue.toFixed(2);
 }
 
 function resetCalculator() {
@@ -97,8 +99,9 @@ function resetCalculator() {
     document.getElementById('input9').value = '';
     document.getElementById('input10').value = '';
 
-    // Очищаем результат
-    document.getElementById('result').innerText = '';
+    // Очищаем результаты
+    document.getElementById('monday-value').textContent = '0';
+    document.getElementById('weekend-value').textContent = '0';
 }
 
 function toggleMenu() {
