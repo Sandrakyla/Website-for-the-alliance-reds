@@ -311,6 +311,9 @@ button:hover {
         max-width: 80%;
         max-height: 80%;
     }
+    .accordion-content img {
+        max-width: 20%; /* Уменьшаем ширину изображения на мобильных устройствах */
+    }
 }
 
 /* Стили для десктопов (от 1024px и выше) */
@@ -436,6 +439,14 @@ button:hover {
     padding: 15px;
 }
 
+.accordion-content img {
+    max-width: 30%; /* Ограничиваем ширину изображения */
+    height: 30%; /* Сохраняем пропорции */
+    margin: 10px 0; /* Добавляем отступы сверху и снизу */
+    border-radius: 5px; /* Закругляем углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
 /* Стили для блоков с результатами */
 .result-block {
     margin-top: 20px;
@@ -454,4 +465,14 @@ button:hover {
 .result-block p {
     font-size: 18px;
     margin: 10px 0;
+}
+
+figure {
+    text-align: center; /* Выравниваем содержимое по центру */
+    margin: 10px 0; /* Добавляем отступы */
+}
+
+figcaption {
+    font-style: italic; /* Делаем текст курсивом */
+    margin-top: 5px; /* Добавляем отступ сверху */
 }
