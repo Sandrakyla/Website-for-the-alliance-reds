@@ -431,8 +431,8 @@ button:hover {
 }
 
 .accordion-content.active {
+    max-height: none; /* Убираем ограничение по высоте */
     padding: 15px;
-    max-height: 500px;
 }
 
 /* Стили для блоков с результатами */
