@@ -113,3 +113,21 @@ document.addEventListener('click', function(event) {
         navLinks.classList.remove('active');
     }
 });
+
+document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+
+        // Закрываем все открытые аккордеоны, кроме текущего
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            if (content !== accordionContent && content.classList.contains('active')) {
+                content.classList.remove('active');
+                content.previousElementSibling.classList.remove('active');
+            }
+        });
+
+        // Открываем/закрываем текущий аккордеон
+        button.classList.toggle('active');
+        accordionContent.classList.toggle('active');
+    });
+});
