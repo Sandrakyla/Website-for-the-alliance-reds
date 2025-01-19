@@ -447,6 +447,64 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень */
 }
 
+.accordion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.accordion-table th, .accordion-table td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+.accordion-table th {
+    background-color: #444;
+    color: #fff;
+}
+
+.accordion-table tr:hover td {
+    background-color: #555;
+}
+
+.accordion-content h4 {
+    margin-top: 20px;
+    color: #b7ff44;
+    font-size: 1.2em;
+}
+
+/* Стили для строк */
+.gray-row {
+    background-color: #808080 !important; /* Серый */
+    color: #fff !important; /* Белый текст */
+}
+
+.green-row {
+    background-color: #4CAF50 !important; /* Зелёный */
+    color: #fff !important; /* Белый текст */
+}
+
+.blue-row {
+    background-color: #2196F3 !important; /* Синий */
+    color: #fff !important; /* Белый текст */
+}
+
+.purple-row {
+    background-color: #9C27B0 !important; /* Фиолетовый */
+    color: #fff !important; /* Белый текст */
+}
+
+.gold-row {
+    background-color: #FFD700 !important; /* Золотой */
+    color: #000 !important; /* Чёрный текст */
+}
+
+.red-row {
+    background-color: #FF0000 !important; /* Красный */
+    color: #fff !important; /* Белый текст */
+}
+
 /* Стили для блоков с результатами */
 .result-block {
     margin-top: 20px;
