@@ -533,6 +533,7 @@ figure {
 figcaption {
     font-style: italic; /* Делаем текст курсивом */
     margin-top: 5px; /* Добавляем отступ сверху */
+<<<<<<< HEAD
 }
 
 .download-section {
@@ -630,4 +631,6 @@ figcaption {
 
 .features-section strong, .limitations-section strong {
     color: #ff4444; /* Цвет для выделения ключевых слов */
+=======
+>>>>>>> 54dca3e7dbd1362fb6a05f1f564a79cb7babb62c
 }
