@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игроки - Альянс Reds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="training.html">Обучение</a>
+            <a href="events.html">События</a>
+            <a href="players.html">Игроки</a>
+            <a href="calculator.html">Калькулятор</a>
+            <a href="bot.html">Бот</a>
+            <a href="contact.html">Контакты</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Игроки</h2>
+        <div class="player-list">
+            <!-- Игрок 1 -->
+            <div class="player">
+                <img src="Photo/NKezeXNMB_o.jpg" alt="Аватар Sandrakyla" onclick="openModal(['Photo/NKezeXNMB_o.jpg', 'Photo/FBUw-HUd3Jk.jpg'])">
+                <p>Sandrakyla</p>
+            </div>
+            <!-- Игрок 2 -->
+            <div class="player">
+                <img src="Photo/7kWo0u_OaBU.jpg" alt="Аватар buR" onclick="openModal(['Photo/7kWo0u_OaBU.jpg'])">
+                <p>buR</p>
+            </div>
+            <div class="player">
+                <img src="Photo/BsWelGgCC_Q.jpg" alt="Аватар КомДив" onclick="openModal(['Photo/BsWelGgCC_Q.jpg'])">
+                <p>КомДив</p>
+            </div>
+            <div class="player">
+                <img src="Photo/cQgFH7b3UDQ.jpg" alt="Аватар ㋡_Хаджи_㋡" onclick="openModal(['Photo/cQgFH7b3UDQ.jpg'])">
+                <p>㋡_Хаджи_㋡</p>
+            </div>
+            <div class="player">
+                <img src="Photo/c1mEBw4LQLM.jpg" alt="Аватар MARINO4ka" onclick="openModal(['Photo/c1mEBw4LQLM.jpg'])">
+                <p>MARINO4ka</p>
+            </div>
+            <div class="player">
+                <img src="Photo/2r3XIjEhiqU.jpg" alt="Аватар ❀⪼0lia⪻❀" onclick="openModal(['Photo/2r3XIjEhiqU.jpg'])">
+                <p>❀⪼0lia⪻❀</p>
+            </div>
+            <!-- Добавьте больше игроков -->
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <button class="prev" onclick="changePhoto(-1)">&#10094;</button>
+        <button class="next" onclick="changePhoto(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
