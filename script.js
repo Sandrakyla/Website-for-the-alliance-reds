@@ -80,10 +80,13 @@ function calculate() {
     // Рассчитываем значения для понедельника и субботы-воскресенья
     const mondayValue = totalMinutes * 250;
     const weekendValue = totalMinutes * 200;
+    // Рассчитываем общее количество дней
+    const totalDays = totalMinutes / 1440; // 1440 минут = 1 день
 
     // Выводим результаты
     document.getElementById('monday-value').textContent = mondayValue.toFixed(2);
     document.getElementById('weekend-value').textContent = weekendValue.toFixed(2);
+    document.getElementById('total-days-value').textContent = totalDays.toFixed(2);
 }
 
 function resetCalculator() {
@@ -102,6 +105,7 @@ function resetCalculator() {
     // Очищаем результаты
     document.getElementById('monday-value').textContent = '0';
     document.getElementById('weekend-value').textContent = '0';
+    document.getElementById('total-days-value').textContent = '0';
 }
 
 function toggleMenu() {
