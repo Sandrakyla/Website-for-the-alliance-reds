@@ -66,9 +66,9 @@ h1, h2 {
 }
 
 .hero {
-    background: url('Photo/Webp.net-resizeimage.jpg') no-repeat center center/cover;
+    background: url('Photo/photo_2025-01-26_15-04-33.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 20px;
+    padding: 150px 20px;
     text-align: center;
 }
 
@@ -533,7 +533,6 @@ figure {
 figcaption {
     font-style: italic; /* Делаем текст курсивом */
     margin-top: 5px; /* Добавляем отступ сверху */
-<<<<<<< HEAD
 }
 
 .download-section {
@@ -631,6 +630,4 @@ figcaption {
 
 .features-section strong, .limitations-section strong {
     color: #ff4444; /* Цвет для выделения ключевых слов */
-=======
->>>>>>> 54dca3e7dbd1362fb6a05f1f564a79cb7babb62c
 }
