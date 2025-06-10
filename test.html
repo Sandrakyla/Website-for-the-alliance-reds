@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Альянс Reds</title>
+    <title>Тест | Альянс Reds</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,7 +14,6 @@
             <a href="index.html">Главная</a>
             <a href="training.html">Обучение</a>
             <a href="test.html">Тест</a>
-            <a href="events.html">События</a>
             <a href="players.html">Игроки</a>
             <a href="calculator.html">Калькулятор</a>
             <a href="contact.html">Контакты</a>
@@ -22,22 +21,26 @@
     </nav>
 
     <div class="container">
-        <h2>Контакты (В разработке)</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="email" placeholder="Ваш email" required>
-            
-            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
-            <button type="submit">Отправить</button>
-        </form>
-        <div class="container" id="contact">
-            <p>Свяжитесь со мной через Telegram:</p>
-            <a href="https://t.me/Sandrakyla" target="_blank" class="telegram-link">
-                <i class="fab fa-telegram"></i> @Sandrakyla
-            </a>
+        <h2>Проверь свои знания</h2>
+        
+        <div id="quiz-container">
+            <!-- Вопросы будут подгружаться здесь -->
         </div>
+
+        <button id="submit-btn" class="test-button">Проверить ответы</button>
+        <div id="results" class="result-block"></div>
     </div>
 
+    <!-- Форма для Formspree -->
+    <form id="gform" action="https://formspree.io/f/mldnjvra" method="POST" target="hidden-iframe">
+        <input type="hidden" name="answers" id="form-answers">
+        <input type="hidden" name="username" id="username">
+    </form>
+
+    <!-- Скрытый iframe -->
+    <iframe name="hidden-iframe" style="display:none;"></iframe>
+
+    <script src="test.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
