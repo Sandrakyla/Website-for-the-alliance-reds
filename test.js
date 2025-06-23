@@ -9,13 +9,31 @@ document.addEventListener('DOMContentLoaded', function() {
             question: "Какой класс эффективен против пехоты?",
             answers: {
                 a: "Стрелки",
-                b: "Рейдеры",
+                b: "Всадники",
                 c: "Инженеры"
             },
             correctAnswer: "a"
         },
         {
-            question: "Сколько нужно стрел для 'Великого охотника'?",
+            question: "Какой класс эффективен против стрелков?",
+            answers: {
+                a: "Пехота",
+                b: "Рейдеры",
+                c: "Инженеры"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "Какой класс эффективен против всадников?",
+            answers: {
+                a: "Пехота",
+                b: "Стрелки",
+                c: "Инженеры"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Сколько нужно стрел для того, чтобы попасть в рейтинг 'Великого охотника'?",
             answers: {
                 a: "100",
                 b: "300",
@@ -31,7 +49,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 c: "Нефтезавод"
             },
             correctAnswer: "b"
-        }
+        },
+        {
+            question: "Какой минимум очков нужно набрать на событии Помпеии, для получения наград?",
+            answers: {
+                a: "15.000",
+                b: "10.000",
+                c: "Неважно"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Сколько нужно фрагментов, чтобы собрать один чип для зверей?",
+            answers: {
+                a: "30",
+                b: "80",
+                c: "60"
+            },
+            correctAnswer: "с"
+        },
+        {
+            question: "Какое максимальное количество очков в событии 'Главный командир' можно заработать в 1 и 6 день, за счёт ускорений?",
+            answers: {
+                a: "100 миллионов",
+                b: "50 миллионов",
+                c: "Неограниченное количество"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Какое максимальное количество очков в событии 'Главный командир' можно заработать, за счёт улучшения цеха?",
+            answers: {
+                a: "Неограниченное количество",
+                b: "40 миллионов",
+                c: "100 миллионов"
+            },
+            correctAnswer: "c"
+        },
+        {
+            question: "Как правильно пользоваться региональными баффами?",
+            answers: {
+                a: "Попросить бафф в региональном чате, отправить свои координаты. Запустить исследование, стройку или тренировку. После получения баффа сидеть и ждать пока не завершится исследование, стройка или тренировка",
+                b: "Попросить бафф в региональном чате, отправить свои координаты. После получения, запустить исследование, стройку или тренировку. Написать в региональный чат, о выполнении",
+                c: "Попросить бафф в региональном чате. После получения, запустить исследование, стройку или тренировку."
+            },
+            correctAnswer: "b"
+        },
     ];
 
     // Генерация теста
@@ -109,6 +172,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('username').value = 
             document.getElementById('username').value || "Аноним";
     
+        // Создаем элемент уведомления
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = 'Ответы успешно отправлены!';
+        document.body.appendChild(notification);
+    
         // Отправка через Formspree
         fetch(form.action, {
             method: 'POST',
@@ -119,13 +188,21 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             if (response.ok) {
-                alert('Ответы успешно отправлены!');
+                notification.classList.add('success', 'show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }, 3000);
             } else {
                 throw new Error('Ошибка отправки');
             }
         })
         .catch(error => {
             console.error('Error:', error);
+            // Меняем уведомление на ошибку
+            notification.textContent = 'Ошибка отправки! Ответы сохранены локально.';
+            notification.classList.add('error', 'show');
+            
             // Резервное сохранение в localStorage
             const data = {
                 username: document.getElementById('username').value,
@@ -135,7 +212,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const submissions = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
             submissions.push(data);
             localStorage.setItem('quizSubmissions', JSON.stringify(submissions));
-            alert('Ответы сохранены локально (ошибка отправки)');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
         });
     }
 
