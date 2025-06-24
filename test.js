@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 b: "80",
                 c: "60"
             },
-            correctAnswer: "с"
+            correctAnswer: "c"
         },
         {
             question: "Какое максимальное количество очков в событии 'Главный командир' можно заработать в 1 и 6 день, за счёт ускорений?",
